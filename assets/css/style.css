@@ -1,7 +1,19 @@
 :root {
-    --src: none;
-    --color_nav:rgba(231, 231, 231, 0.5);
+    --bg: none;
+    --icon: none;
+    --color-nav: #ffffff00;
+    --color-nav-name: #ffffff00;
 }
+@font-face {
+        font-family: "Smiley";
+        src: url("../font/hk4e_zh-cn.ttf") format("truetype");
+        font-display: swap;
+    }
+body {
+    font-family: "Smiley", sans-serif;
+}
+
+
 
 #background {
     left: 0;
@@ -17,20 +29,58 @@
     margin: 0;
     border: 0;
     padding: 0;
-    background-image: var(--src);
+    background-image: var(--bg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     filter: blur(3px);
-    height:100%;
+    height: 100%;
     width: 100%;
 }
 
-#nav{
+#nav {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 108px;
-    background-color: var(--color_nav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(6px);
+    background-color: var(--color-nav);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+    border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+#nav-favicon {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 40px;
+    border-radius: 25%;
+    background-image: var(--icon);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 0 0 auto;
+}
+
+#nav-name {
+    color: var(--color-nav-name);
+    margin-left: 10px;
+    font-size: 40px;
+}
+
+#nav-logo {
+    align-items: center;
+    display: flex;
+    width: 30vw;
+    height: 100%;
 }

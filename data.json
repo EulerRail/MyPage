@@ -2,21 +2,24 @@
     "repo": [],
     "link": [],
     "note": [],
-    "basic": {
-        "name": "",
+    "data": {
+        "name": "EulerRail",
         "title": "",
         "sentence_list": [],
         "Profile": "",
-        "title_Profile": ""
-    },
-    "data": {
+        "title_Profile": "",
         "bg": {
             "type": "image",
-            "src": "1.jpg"
+            "src": "img/bg/1.jpg"
+        },
+        "icon": {
+            "type": "image",
+            "src": "img/icon/Profile.jpg"
         },
         "tag_list": [],
-        "color_list": [{
-            "color1": "#ff0000"
-        }]
+        "color_list": {
+            "color-nav": "#f4f4f419",
+            "color-nav-name": "#f4f4f4"
+        }
     }
 }
