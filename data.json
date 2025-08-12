@@ -2,5 +2,21 @@
     "repo": [],
     "link": [],
     "note": [],
-    "data": []
+    "basic": {
+        "name": "",
+        "title": "",
+        "sentence_list": [],
+        "Profile": "",
+        "title_Profile": ""
+    },
+    "data": {
+        "bg": {
+            "type": "image",
+            "src": "1.jpg"
+        },
+        "tag_list": [],
+        "color_list": [{
+            "color1": "#ff0000"
+        }]
+    }
 }
