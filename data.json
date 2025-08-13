@@ -16,27 +16,31 @@
         "tag_list": [
             {
                 "name": "流萤厨",
-                "hover-color": "#ff0000"
+                "hover-color": "#f2d8e4"
             },
             {
                 "name": "html+css+Js",
-                "hover-color": "#00ff00"
+                "hover-color": "#c34628"
             },
             {
                 "name": "Python",
-                "hover-color": "#0000ff"
+                "hover-color": "#ffc107"
             },
             {
                 "name": "GitHub",
-                "hover-color": "#ff00ff"
+                "hover-color": "#606060"
             },
             {
                 "name": "MC",
-                "hover-color": "#00ffff"
+                "hover-color": "#8EB971"
             },
             {
                 "name": "VScode",
-                "hover-color": "#ff00ff"
+                "hover-color": "#22a7f2"
+            },
+            {
+                "name": "玻璃感",
+                "hover-color": "#ffffff77"
             }
         ],
         "color_list": {

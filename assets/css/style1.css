@@ -71,10 +71,13 @@
     border-radius: 99px;
     height: 20px;
     padding: 5px 10px;
+    font-size: 17px;
     backdrop-filter: blur(4px);
-    box-shadow: rgba(0, 0, 0, 0.3) 1px 4px 4px;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    box-shadow: rgba(255, 255, 255, 0.521) 1px 4px 4px;
 }
 
 #page1-left-middle-tags span:hover {
     background-color: var(--color);
+    font-size: 18px;
 }
