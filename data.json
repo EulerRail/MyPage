@@ -4,7 +4,7 @@
     "note": [],
     "data": {
         "name": "EulerRail",
-        "title": "",
+        "title": "MyPage",
         "bg": {
             "type": "image",
             "src": "img/bg/1.jpg"
@@ -13,7 +13,32 @@
             "type": "image",
             "src": "img/icon/Profile.jpg"
         },
-        "tag_list": [],
+        "tag_list": [
+            {
+                "name": "流萤厨",
+                "hover-color": "#ff0000"
+            },
+            {
+                "name": "html+css+Js",
+                "hover-color": "#00ff00"
+            },
+            {
+                "name": "Python",
+                "hover-color": "#0000ff"
+            },
+            {
+                "name": "GitHub",
+                "hover-color": "#ff00ff"
+            },
+            {
+                "name": "MC",
+                "hover-color": "#00ffff"
+            },
+            {
+                "name": "VScode",
+                "hover-color": "#ff00ff"
+            }
+        ],
         "color_list": {
             "color-nav": "#f4f4f419",
             "color-nav-name": "#f4f4f4",

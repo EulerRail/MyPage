@@ -13,7 +13,7 @@
     font-display: swap;   /* 避免白屏闪字 */
 }
 body {
-    font-family: 'hk';
+    font-family: 'hk','Alimama PuHuiTi', 'Noto Sans SC', sans-serif;
 }
 
 
@@ -94,10 +94,10 @@ body {
     flex: 1 1 0;
 }
 #nav-list-page {
-    transform: translateX(-40px);
+    margin-left: 30%;
     display: flex;
     align-items: stretch;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
 }
 .nav-character {

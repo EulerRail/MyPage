@@ -2,6 +2,7 @@ fetch('data.json') /** * 从data.json文件获取数据并处理 * 使用fetch A
     .then(response => response.json()) //  将响应解析为JSON格式
     .then(data => {
         initnav_html(data.data, data); //  初始化页面样式和内容
+        init_page1(data.data, data); //  初始化页面1的样式和内容
     })
     .catch(error => { //  捕获并处理可能的错误
         console.error('Error fetching JSON:', error);
@@ -12,7 +13,6 @@ function setStyle(key, value) {
 }
 function setStyleFile(key, src) {
     document.documentElement.style.setProperty(`--${key}`, `url(${"../" + src})`);
-    // console.log(`Set style for ${key}: url(${"../" + src})`);
 }
 function changeContent(key, value) {
     document.getElementById(key).textContent = value;
@@ -29,10 +29,18 @@ function initnav_html(data, all) {
     );
     changeContentFile('t-favicon', data.icon.src);
     changeContent('nav-name', data.name); //  设置导航名称文本内容
-    
+    changeContent('title', data.title); //  设置导航描述文本内容
 }
 function init_page1(data, all) {
     Object.entries(color_data).forEach(([k, v]) => //  遍历颜色数据并设置样式
         setStyle(k, v)
     );
+    for (const obj of data.tag_list) {
+        // 处理每个标签对象
+        const tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.textContent = obj.name;
+        tag.style.setProperty('--color', obj['hover-color']);
+        document.getElementById('page1-left-middle-tags').appendChild(tag);
+    }
 }

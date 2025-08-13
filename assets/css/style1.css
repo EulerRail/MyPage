@@ -1,11 +1,11 @@
-:root{
+:root {
     --color-main-name: none;
     --icon: none;
 }
 
-#page1{
+#page1 {
     position: fixed;
-    top:120px;
+    top: 120px;
     width: 94%;
     left: 3%;
     height: calc(100% - 140px);
@@ -14,21 +14,22 @@
     justify-content: space-between;
     border-radius: 10px;
     backdrop-filter: blur(4px);
-    background-color: rgba(255,255,255, 0.108);
+    background-color: rgba(255, 255, 255, 0.108);
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-    border: 1px rgba(255,255,255,0.4) solid;
-    border-bottom: 1px rgba(40,40,40,0.35) solid;
-    border-right: 1px rgba(40,40,40,0.35) solid;
+    border: 1px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 1px rgba(40, 40, 40, 0.35) solid;
+    border-right: 1px rgba(40, 40, 40, 0.35) solid;
 }
 
-#page1-left{
+#page1-left {
     flex: 0 0 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
-#page1-left-top{
+
+#page1-left-top {
     flex: 0 0 auto;
     margin: 30px;
     background-image: var(--icon);
@@ -38,4 +39,42 @@
     border-radius: 25%;
     width: 180px;
     height: 180px;
+}
+
+#page1-left-middle {
+    flex: 0 0 auto;
+    margin: 0px 20px 20px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 191, 255, 0.031);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+    border-right: 2px rgba(40, 40, 40, 0.35) solid;
+    height: 150px;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page1-left-middle-tags {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+    width: 90%;
+    height: 90%;
+}
+#page1-left-middle-tags span{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 99px;
+    height: 20px;
+    padding: 5px 10px;
+    backdrop-filter: blur(4px);
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 4px 4px;
+}
+
+#page1-left-middle-tags span:hover {
+    background-color: var(--color);
 }
