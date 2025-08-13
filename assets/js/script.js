@@ -29,6 +29,7 @@ function initnav_html(data, all) {
     );
     changeContentFile('t-favicon', data.icon.src);
     changeContent('nav-name', data.name); //  设置导航名称文本内容
+    
 }
 function init_page1(data, all) {
     Object.entries(color_data).forEach(([k, v]) => //  遍历颜色数据并设置样式

@@ -5,9 +5,6 @@
     "data": {
         "name": "EulerRail",
         "title": "",
-        "sentence_list": [],
-        "Profile": "",
-        "title_Profile": "",
         "bg": {
             "type": "image",
             "src": "img/bg/1.jpg"
