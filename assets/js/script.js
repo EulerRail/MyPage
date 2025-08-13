@@ -41,6 +41,7 @@ function init_page1(data, all) {
         tag.className = 'tag';
         tag.textContent = obj.name;
         tag.style.setProperty('--color', obj['hover-color']);
-        document.getElementById('page1-left-middle-tags').appendChild(tag);
+        document.getElementById("page1-left-middle-description").innerHTML = data.description.replace(/\n/g, "<br>");
+        document.getElementById('page1-left-bottom-tags').appendChild(tag);
     }
 }

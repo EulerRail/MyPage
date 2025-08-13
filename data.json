@@ -5,6 +5,7 @@
     "data": {
         "name": "EulerRail",
         "title": "MyPage",
+        "description": "mm一中开你m学nmsl<br>上林州一中这辈子真有了",
         "bg": {
             "type": "image",
             "src": "img/bg/1.jpg"
@@ -46,7 +47,9 @@
         "color_list": {
             "color-nav": "#f4f4f419",
             "color-nav-name": "#f4f4f4",
-            "color-main-name": "#ffffff"
+            "color-main-name": "#ffffff",
+            "color-main-name2": "#F08080",
+            "color-main-description": "#ffffff"
         }
     }
 }

@@ -1,9 +1,14 @@
 :root {
     --color-main-name: none;
+    --color-main-name2: none;
+    --color-main-description: none;
     --icon: none;
 }
-
+#main {
+    overflow-x: auto;   /* 让视口直接出现横向滚动条 */
+}
 #page1 {
+    overflow-x: auto;
     position: fixed;
     top: 120px;
     width: 94%;
@@ -41,7 +46,7 @@
     height: 180px;
 }
 
-#page1-left-middle {
+#page1-left-bottom {
     flex: 0 0 auto;
     margin: 0px 20px 20px 20px;
     border-radius: 20px;
@@ -57,7 +62,7 @@
     justify-content: center;
     align-items: center;
 }
-#page1-left-middle-tags {
+#page1-left-bottom-tags {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -66,8 +71,8 @@
     width: 90%;
     height: 90%;
 }
-#page1-left-middle-tags span{
-    background-color: rgba(255, 255, 255, 0.2);
+#page1-left-bottom-tags span{
+    background-color: rgba(189, 189, 189, 0.2);
     border-radius: 99px;
     height: 20px;
     padding: 5px 10px;
@@ -76,8 +81,56 @@
     transition: background-color 0.3s ease, font-size 0.3s ease;
     box-shadow: rgba(255, 255, 255, 0.521) 1px 4px 4px;
 }
-
-#page1-left-middle-tags span:hover {
+#page1-left-middle{
+    flex: 0 0 90px;
+    margin: 10px 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    align-self: stretch;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.26);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 3px rgba(255,255,255,0.4) solid;
+    border-bottom: 3px rgba(40,40,40,0.35) solid;
+    border-right: 3px rgba(40,40,40,0.35) solid;
+}
+#page1-left-middle-descriptions {
+    margin: 2px;
+    height: calc(100% - 4px);
+}
+#page1-left-bottom-tags span:hover {
     background-color: var(--color);
-    font-size: 18px;
+    font-size: 17px;
+}
+#page1-right{
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    flex: 1 0 auto;
+    min-width:max-content; 
+}
+#page1-right-top{
+    overflow-x: auto;
+    flex-wrap:nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    height: 200px;
+    flex: 0 0 auto;
+    gap: 20px;
+    min-width: max-content;
+}
+#page1-right-top-clock{
+    width: 400px;
+}
+#page1-right-top-date{
+    width: 280px;
+}
+#page1-right-top-music{
+    width: 280px;
 }
