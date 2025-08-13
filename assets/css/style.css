@@ -118,3 +118,7 @@ body {
     border-right: 1px rgba(40,40,40,0.35) solid;
     filter: blur(0px);
 }
+
+.no-active {
+    display: none !important;
+}
