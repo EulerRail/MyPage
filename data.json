@@ -19,7 +19,8 @@
         "tag_list": [],
         "color_list": {
             "color-nav": "#f4f4f419",
-            "color-nav-name": "#f4f4f4"
+            "color-nav-name": "#f4f4f4",
+            "color-main-name": "#ffffff"
         }
     }
 }

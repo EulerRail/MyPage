@@ -4,13 +4,16 @@
     --color-nav: #ffffff00;
     --color-nav-name: #ffffff00;
 }
+
 @font-face {
-        font-family: "Smiley";
-        src: url("../font/hk4e_zh-cn.ttf") format("truetype");
-        font-display: swap;
-    }
+    font-family: hk;
+    src: url('../font/web.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;   /* 避免白屏闪字 */
+}
 body {
-    font-family: "Smiley", sans-serif;
+    font-family: 'hk';
 }
 
 
@@ -46,7 +49,7 @@ body {
     height: 108px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     gap: 20px;
     border-radius: 5px;
     backdrop-filter: blur(6px);
@@ -81,6 +84,37 @@ body {
 #nav-logo {
     align-items: center;
     display: flex;
-    width: 30vw;
+    flex: 0 0 30vw;
     height: 100%;
+}
+#nav-list {
+    display: flex;
+    align-items: center;
+    align-items: stretch;
+    flex: 1 1 0;
+}
+#nav-list-page {
+    transform: translateX(-40px);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+}
+.nav-character {
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 30px 30px;
+    border-radius: 10px;
+    filter: blur(1px);
+    transition: background-color 0.4s ease, filter 0.4s ease;
+    color: var(--color-nav-name);
+}
+.nav-character:hover {
+    background-color: rgba(255,255,255, 0.065);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 1px rgba(255,255,255,0.4) solid;
+    border-bottom: 1px rgba(40,40,40,0.35) solid;
+    border-right: 1px rgba(40,40,40,0.35) solid;
+    filter: blur(0px);
 }
