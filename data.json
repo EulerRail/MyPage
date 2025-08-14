@@ -49,7 +49,8 @@
             "color-nav-name": "#f4f4f4",
             "color-main-name": "#ffffff",
             "color-main-name2": "#F08080",
-            "color-main-description": "#ffffff"
+            "color-main-description": "#ffffff",
+            "color-main-clock": "#ffffff"
         }
     }
 }

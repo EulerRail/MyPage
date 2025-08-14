@@ -2,12 +2,15 @@
     --color-main-name: none;
     --color-main-name2: none;
     --color-main-description: none;
-    --color-main-clock:none;
+    --color-main-clock: none;
     --icon: none;
 }
+
 #main {
-    overflow-x: auto;   /* 让视口直接出现横向滚动条 */
+    overflow-x: auto;
+    /* 让视口直接出现横向滚动条 */
 }
+
 #page1 {
     overflow-x: auto;
     position: fixed;
@@ -63,6 +66,7 @@
     justify-content: center;
     align-items: center;
 }
+
 #page1-left-bottom-tags {
     display: flex;
     justify-content: flex-start;
@@ -72,7 +76,8 @@
     width: 90%;
     height: 90%;
 }
-#page1-left-bottom-tags span{
+
+#page1-left-bottom-tags span {
     background-color: rgba(189, 189, 189, 0.2);
     border-radius: 99px;
     height: 20px;
@@ -82,7 +87,8 @@
     transition: background-color 0.3s ease, font-size 0.3s ease;
     box-shadow: rgba(255, 255, 255, 0.521) 1px 4px 4px;
 }
-#page1-left-middle{
+
+#page1-left-middle {
     flex: 0 0 90px;
     margin: 10px 20px;
     padding: 10px;
@@ -95,54 +101,149 @@
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, 0.26);
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-    border: 3px rgba(255,255,255,0.4) solid;
-    border-bottom: 3px rgba(40,40,40,0.35) solid;
-    border-right: 3px rgba(40,40,40,0.35) solid;
+    border: 3px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 3px rgba(40, 40, 40, 0.35) solid;
+    border-right: 3px rgba(40, 40, 40, 0.35) solid;
 }
+
 #page1-left-middle-descriptions {
     margin: 2px;
     height: calc(100% - 4px);
 }
+
 #page1-left-bottom-tags span:hover {
     background-color: var(--color);
     font-size: 17px;
 }
-#page1-right{
+
+#page1-right {
     display: flex;
     flex-direction: column;
     margin: 25px;
     flex: 1 0 auto;
-    min-width:max-content; 
+    min-width: max-content;
 }
-#page1-right-top{
+
+#page1-right-top {
     overflow-x: auto;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-around;
-    height: 200px;
+    height: 210px;
     flex: 0 0 auto;
     gap: 20px;
     min-width: max-content;
 }
-#page1-right-top-clock{
+
+#page1-right-top-time {
     width: 400px;
     text-align: center;
     padding-top: 50px;
-    font-size: 60px;
     border-radius: 20px;
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, 0.26);
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-    border: 3px rgba(255,255,255,0.4) solid;
-    border-bottom: 3px rgba(40,40,40,0.35) solid;
-    border-right: 3px rgba(40,40,40,0.35) solid;
+    border: 3px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 3px rgba(40, 40, 40, 0.35) solid;
+    border-right: 3px rgba(40, 40, 40, 0.35) solid;
     color: var(--color-main-clock);
 }
-#page1-right-top-date{
-    width: 280px;
+#page1-right-top-clock {
+    font-family: led;
+    width: 400px;
+    font-size: 90px;
+    color: var(--color-main-clock);
 }
-#page1-right-top-music{
-    width: 280px;
+#page1-right-top-daytime {
+    font-family: hk;
+    font-size: 40px;
+    color: var(--color-main-clock);
 }
+#page1-right-top-date {
+    font-family: hk;
+    width: 300px;
+    border-radius: 28px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 191, 255, 0.069);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 3px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 3px rgba(40, 40, 40, 0.35) solid;
+    border-right: 3px rgba(40, 40, 40, 0.35) solid;
+}
+
+#page1-right-top-music {
+    width: 300px;
+}
+
+#page1-right-top-date-list {
+    position: relative;
+    width: 280px;
+    height: 190px;
+    left: 10px;
+    top: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+
+
+
+
+
+
+.date{
+    padding-left: 3px;
+    padding-top: 3px;
+    border-radius: 5px;
+    margin: 2px;
+    backdrop-filter: blur(9px);
+    background-color: rgba(209, 209, 209, 0.452);
+}
+#date0 { grid-area: 1 / 1 / 2 / 2; }
+#date1 { grid-area: 1 / 2 / 2 / 3; }
+#date2 { grid-area: 1 / 3 / 2 / 4; }
+#date3 { grid-area: 1 / 4 / 2 / 5; }
+#date4 { grid-area: 1 / 5 / 2 / 6; }
+#date5 { grid-area: 1 / 6 / 2 / 7; }
+#date6 { grid-area: 1 / 7 / 2 / 8; }
+#date7 { grid-area: 2 / 1 / 3 / 2; }
+#date8 { grid-area: 2 / 2 / 3 / 3; }
+#date9 { grid-area: 2 / 3 / 3 / 4; }
+#date10 { grid-area: 2 / 4 / 3 / 5; }
+#date11 { grid-area: 2 / 5 / 3 / 6; }
+#date12 { grid-area: 2 / 6 / 3 / 7; }
+#date13 { grid-area: 2 / 7 / 3 / 8; }
+#date14 { grid-area: 3 / 1 / 4 / 2; }
+#date15 { grid-area: 3 / 2 / 4 / 3; }
+#date16 { grid-area: 3 / 3 / 4 / 4; }
+#date17 { grid-area: 3 / 4 / 4 / 5; }
+#date18 { grid-area: 3 / 5 / 4 / 6; }
+#date19 { grid-area: 3 / 6 / 4 / 7; }
+#date20 { grid-area: 3 / 7 / 4 / 8; }
+#date21 { grid-area: 4 / 1 / 5 / 2; }
+#date22 { grid-area: 4 / 2 / 5 / 3; }
+#date23 { grid-area: 4 / 3 / 5 / 4; }
+#date24 { grid-area: 4 / 4 / 5 / 5; }
+#date25 { grid-area: 4 / 5 / 5 / 6; }
+#date26 { grid-area: 4 / 6 / 5 / 7; }
+#date27 { grid-area: 4 / 7 / 5 / 8; }
+#date28 { grid-area: 5 / 1 / 6 / 2; }
+#date29 { grid-area: 5 / 2 / 6 / 3; }
+#date30 { grid-area: 5 / 3 / 6 / 4; }
+#date31 { grid-area: 5 / 4 / 6 / 5; }
+#date32 { grid-area: 5 / 5 / 6 / 6; }
+#date33 { grid-area: 5 / 6 / 6 / 7; }
+#date34 { grid-area: 5 / 7 / 6 / 8; }
+#date35 { grid-area: 6 / 1 / 7 / 2; }
+#date36 { grid-area: 6 / 2 / 7 / 3; }
+#date37 { grid-area: 6 / 3 / 7 / 4; }
+#date38 { grid-area: 6 / 4 / 7 / 5; }
+#date39 { grid-area: 6 / 5 / 7 / 6; }
+#date40 { grid-area: 6 / 6 / 7 / 7; }
+#date41 { grid-area: 6 / 7 / 7 / 8; }
+

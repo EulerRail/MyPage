@@ -1,47 +1,162 @@
 fetch('data.json') /** * 从data.json文件获取数据并处理 * 使用fetch API异步获取JSON数据 * 然后处理数据并更新页面样式和内容 */
     .then(response => response.json()) //  将响应解析为JSON格式
     .then(data => {
-        initnav_html(data.data, data); //  初始化页面样式和内容
-        init_page1(data.data, data); //  初始化页面1的样式和内容
+        initNavHtml(data.data, data); //  初始化页面样式和内容
+        initPage1(data.data, data); //  初始化页面1的样式和内容
     })
     .catch(error => { //  捕获并处理可能的错误
         console.error('Error fetching JSON:', error);
     });
 
+
+
+/**
+ * 设置CSS变量值
+ * @param {string} key - CSS变量名
+ * @param {string} value - 变量值
+ */
 function setStyle(key, value) {
     document.documentElement.style.setProperty(`--${key}`, value);
 }
+
+/**
+ * 设置CSS变量值为图片URL
+ * @param {string} key - CSS变量名
+ * @param {string} src - 图片路径
+ */
 function setStyleFile(key, src) {
-    document.documentElement.style.setProperty(`--${key}`, `url(${"../" + src})`);
+    document.documentElement.style.setProperty(`--${key}`, `url("../${src}")`);
 }
+
+/**
+ * 更新元素文本内容
+ * @param {string} key - 元素ID
+ * @param {string} value - 新的文本内容
+ */
 function changeContent(key, value) {
     document.getElementById(key).textContent = value;
 }
+
+/**
+ * 更新链接元素的href属性
+ * @param {string} key - 元素ID
+ * @param {string} src - 新的链接地址
+ */
 function changeContentFile(key, src) {
-    document.getElementById(key).href = "assets/" + src;
+    document.getElementById(key).href = `assets/${src}`;
 }
-function initnav_html(data, all) {
-    setStyleFile('bg', data.bg.src) //  设置背景图片样式
-    setStyleFile('icon', data.icon.src) //  设置图标样式 
-    color_data = data.color_list //  获取颜色数据
-    Object.entries(color_data).forEach(([k, v]) => //  遍历颜色数据并设置样式
-        setStyle(k, v)
-    );
+
+/**
+ * 初始化导航栏样式和内容
+ * @param {Object} data - 页面数据对象
+ * @param {Object} all - 完整的数据对象
+ */
+function initNavHtml(data, all) {
+    // 设置背景和图标
+    setStyleFile('bg', data.bg.src);
+    setStyleFile('icon', data.icon.src);
+
+    // 设置颜色主题
+    const colorData = data.color_list;
+    Object.entries(colorData).forEach(([key, value]) => {
+        setStyle(key, value);
+    });
+
+    // 更新页面内容
     changeContentFile('t-favicon', data.icon.src);
-    changeContent('nav-name', data.name); //  设置导航名称文本内容
-    changeContent('title', data.title); //  设置导航描述文本内容
+    changeContent('nav-name', data.name);
+    changeContent('title', data.title);
 }
-function init_page1(data, all) {
-    Object.entries(color_data).forEach(([k, v]) => //  遍历颜色数据并设置样式
-        setStyle(k, v)
-    );
-    for (const obj of data.tag_list) {
-        // 处理每个标签对象
+
+/**
+ * 初始化第一页的样式和内容
+ * @param {Object} data - 页面数据对象
+ * @param {Object} all - 完整的数据对象
+ */
+function initPage1(data, all) {
+    const nowtime = new Date();
+    // 设置颜色主题
+    const colorData = data.color_list;
+    Object.entries(colorData).forEach(([key, value]) => {
+        setStyle(key, value);
+    });
+
+    // 处理标签列表
+    const tagsContainer = document.getElementById('page1-left-bottom-tags');
+    const descriptionContainer = document.getElementById('page1-left-middle-description');
+
+    // 设置描述文本，保留换行格式
+    descriptionContainer.innerHTML = data.description.replace(/\n/g, "<br>");
+    changeContent('page1-right-top-daytime',`${monthNameCN(nowtime.getMonth())}  ${weekdayNameCN(nowtime.getDay())}`)
+    // 创建并添加标签
+    data.tag_list.forEach(tagObj => {
         const tag = document.createElement('span');
         tag.className = 'tag';
-        tag.textContent = obj.name;
-        tag.style.setProperty('--color', obj['hover-color']);
-        document.getElementById("page1-left-middle-description").innerHTML = data.description.replace(/\n/g, "<br>");
-        document.getElementById('page1-left-bottom-tags').appendChild(tag);
-    }
+        tag.textContent = tagObj.name;
+        tag.style.setProperty('--color', tagObj['hover-color']);
+        tagsContainer.appendChild(tag);
+    });
 }
+
+function monthNameCN(m) {
+    if (m < 0 || m > 11) throw new RangeError('月份索引必须是 0–11');
+    return [
+        '一月', '二月', '三月', '四月', '五月', '六月',
+        '七月', '八月', '九月', '十月', '十一月', '十二月'
+    ][m];
+}
+
+// 0–6 → 周日、周一……周六
+function weekdayNameCN(d) {
+    if (d < 0 || d > 6) throw new RangeError('星期索引必须是 0–6');
+    return ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][d];
+}
+/**
+ * 更新时钟显示
+ */
+function tick() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('page1-right-top-clock').innerHTML =
+        `${hours}:${minutes}:${seconds}`;
+}
+
+// 初始化时钟并设置定时更新
+tick();
+setInterval(tick, 1000);
+setDate()
+
+function setDate() {
+    // 1. 基本数据
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth();
+
+    const firstDay = new Date(year, month, 1).getDay();        // 本月 1 号星期几
+    const daysCur = new Date(year, month + 1, 0).getDate();   // 本月天数
+    const daysPrev = new Date(year, month, 0).getDate();       // 上月天数
+
+    // 2. 42 格数组
+    const cells = Array(42).fill(0);
+    for (let d = 1; d < daysCur + 1; d++) {
+        cells[firstDay + d - 1] = d
+        if (new Date(year, month, d).getDay() == 0 | new Date(year, month, d).getDay() == 6) {
+            document.getElementById(`date${firstDay + d - 1}`).style.color = "#ff0000"
+        }
+    }
+
+    for (let a = 0; a < 42; a++) {
+        if (cells[a] == 0) {
+            cells[a] = new Date(year, month, 1 - firstDay + a).getDate()
+            document.getElementById(`date${a}`).style.color = "#8b8b8bff"
+        }
+        document.getElementById(`date${a}`).textContent = cells[a]
+        if (new Date(year, month, 1 - firstDay + a).getDate() == today.getDate()) {
+            document.getElementById(`date${a}`).style.backgroundColor = "#20cbffff"
+        }
+    }
+    console.log(cells)
+}
+
