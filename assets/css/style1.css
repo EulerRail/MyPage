@@ -89,7 +89,7 @@
 }
 
 #page1-left-middle {
-    flex: 0 0 90px;
+    flex: 0 0 50px;
     margin: 10px 20px;
     padding: 10px;
     display: flex;
@@ -130,7 +130,7 @@
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    justify-content: space-around;
+    justify-content:flex-start;
     height: 210px;
     flex: 0 0 auto;
     gap: 20px;
@@ -162,6 +162,7 @@
     color: var(--color-main-clock);
 }
 #page1-right-top-date {
+    margin-left: 100px;
     font-family: hk;
     width: 300px;
     border-radius: 28px;
@@ -190,11 +191,39 @@
     grid-row-gap: 0px;
 }
 
+#page1-left-bottom-links{
+    flex:0 0 auto;
+    font-family: hk;
+    width: 350px;
+    border-radius: 28px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 191, 255, 0.069);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 3px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 3px rgba(40, 40, 40, 0.35) solid;
+    border-right: 3px rgba(40, 40, 40, 0.35) solid;
+}
 
+.link {
+    width: 270px;
+    height: 90px;
+    margin: 10px;
+    padding: 5px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(188, 231, 245, 0.007);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 3px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 3px rgba(40, 40, 40, 0.35) solid;
+    border-right: 3px rgba(40, 40, 40, 0.35) solid;
 
+}
 
-
-
+.link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
 .date{
     padding-left: 3px;
@@ -247,3 +276,11 @@
 #date40 { grid-area: 6 / 6 / 7 / 7; }
 #date41 { grid-area: 6 / 7 / 7 / 8; }
 
+.link img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 25%;
+    right: 20px;
+    top: 10px;
+}

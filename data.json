@@ -1,7 +1,7 @@
 {
-    "repo": [],
-    "link": [],
-    "note": [],
+    "repos": [],
+    "tools": [],
+    "notes": [],
     "data": {
         "name": "EulerRail",
         "title": "MyPage",
@@ -50,7 +50,21 @@
             "color-main-name": "#ffffff",
             "color-main-name2": "#F08080",
             "color-main-description": "#ffffff",
-            "color-main-clock": "#ffffff"
-        }
+            "color-main-clock": "#5ccbff"
+        },
+        "link_list": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/EulerRail",
+                "color": "#010101",
+                "icon": "img/icon/GitHub.png"
+            },
+            {
+                "name": "Bilibili",
+                "url": "https://space.bilibili.com/3546941321382878",
+                "color": "#ff6a00",
+                "icon": "img/icon/bili.png"
+            }
+        ]
     }
 }
