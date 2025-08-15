@@ -1,7 +1,22 @@
 {
-    "repos": [],
-    "tools": [],
+    "repos": [
+        {
+            "name":"PythonDemo",
+            "content":"Python小demo合集",
+            "href":"https://github.com/EulerRail/PythonDemo"
+        }
+    ],
+    "tools": [
+        
+    ],
     "notes": [],
+    "lines": [
+        
+        {
+            "time": "2025-8-10",
+            "content": "开始建站"
+        }
+    ],
     "data": {
         "name": "EulerRail",
         "title": "MyPage",
@@ -50,7 +65,9 @@
             "color-main-name": "#ffffff",
             "color-main-name2": "#F08080",
             "color-main-description": "#ffffff",
-            "color-main-clock": "#5ccbff"
+            "color-main-clock": "#5ccbff",
+            "color-main-line-radius":"#010101",
+            "color-main-line":"#010101"
         },
         "link_list": [
             {

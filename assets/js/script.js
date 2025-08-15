@@ -3,6 +3,9 @@ fetch('data.json') /** * 从data.json文件获取数据并处理 * 使用fetch A
     .then(data => {
         initNavHtml(data.data, data); //  初始化页面样式和内容
         initPage1(data.data, data); //  初始化页面1的样式和内容
+        setLines(data)
+        setRepos(data)
+        setTools(data)
     })
     .catch(error => { //  捕获并处理可能的错误
         console.error('Error fetching JSON:', error);
@@ -87,7 +90,7 @@ function initPage1(data, all) {
 
     // 设置描述文本，保留换行格式
     descriptionContainer.innerHTML = data.description.replace(/\n/g, "<br>");
-    changeContent('page1-right-top-daytime',`${monthNameCN(nowtime.getMonth())}  ${weekdayNameCN(nowtime.getDay())}`)
+    changeContent('page1-right-top-daytime', `${monthNameCN(nowtime.getMonth())}  ${weekdayNameCN(nowtime.getDay())}`)
     // 创建并添加标签
     data.tag_list.forEach(tagObj => {
         const tag = document.createElement('span');
@@ -160,3 +163,60 @@ function setDate() {
     console.log(cells)
 }
 
+function setLines(data) {
+    const linesContainer = document.getElementById('linelist');
+    linesContainer.innerHTML = ''; // 清空现有内容
+    data.lines.forEach(line => {
+        const lineElement = document.createElement('div');
+        lineElement.className = 'line-item';
+        lineElement.innerHTML = `
+        <div class="line-radius"></div>
+            <div class="line-time">${line.time}</div>
+            <div class="line-content">${line.content}</div>
+        `;
+        linesContainer.appendChild(lineElement);
+    });
+}
+
+function setRepos(data) {
+    data = data.repos;
+    if (data.length > 3) {
+        data = [data[0], data[1], data[2]]
+    } else {
+        data=data
+    }
+    for(const value in data){
+        const Repos = document.getElementById("page1-right-bottom-repos-list")
+        const itemtool = document.createElement('div')
+        itemtool.className = "oneitem"
+        itemtool.innerHTML=`<a href="${data[value].href}"></a>
+                                <div>
+                                    <p class="oneitem-title"
+                                        style="transform: translateY(-10px);font-size: 26px;margin: 20px 15px 0px 15px;">${data[value].name}</p>
+                                    <p class="oneitem-concent"
+                                        style="transform: translateY(-5px);font-family: 'Noto Sans SC', sans-serif;font-size: 18px;margin: 0px 15px 0px 15px; ">${data[value].content}</p>
+                                </div>`
+        Repos.appendChild(itemtool)
+    }
+}
+function setTools(data) {
+    data = data.tools;
+    if (data.length > 3) {
+        data = [data[0], data[1], data[2]]
+    } else {
+        data=data
+    }
+    for(const value in data){
+        const Tools = document.getElementById("page1-right-bottom-tools-list")
+        const itemtool = document.createElement('div')
+        itemtool.className = "oneitem"
+        itemtool.innerHTML=`<a href="${data[value].href}"></a>
+                                <div>
+                                    <p class="oneitem-title"
+                                        style="transform: translateY(-10px);font-size: 26px;margin: 20px 15px 0px 15px;">${data[value].name}</p>
+                                    <p class="oneitem-concent"
+                                        style="transform: translateY(-5px);font-family: 'Noto Sans SC', sans-serif;font-size: 18px;margin: 0px 15px 0px 15px; ">${data[value].content}</p>
+                                </div>`
+        Tools.appendChild(itemtool)
+    }
+}
