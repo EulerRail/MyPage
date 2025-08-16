@@ -6,6 +6,8 @@ fetch('data.json') /** * 从data.json文件获取数据并处理 * 使用fetch A
         setLines(data)
         setRepos(data)
         setTools(data)
+        setPage2Repo(data)
+        setPage2Tool(data)
     })
     .catch(error => { //  捕获并处理可能的错误
         console.error('Error fetching JSON:', error);
@@ -183,13 +185,13 @@ function setRepos(data) {
     if (data.length > 3) {
         data = [data[0], data[1], data[2]]
     } else {
-        data=data
+        data = data
     }
-    for(const value in data){
+    for (const value in data) {
         const Repos = document.getElementById("page1-right-bottom-repos-list")
         const itemtool = document.createElement('div')
         itemtool.className = "oneitem"
-        itemtool.innerHTML=`<a href="${data[value].href}"></a>
+        itemtool.innerHTML = `<a href="${data[value].href}"></a>
                                 <div>
                                     <p class="oneitem-title"
                                         style="transform: translateY(-10px);font-size: 26px;margin: 20px 15px 0px 15px;">${data[value].name}</p>
@@ -204,13 +206,13 @@ function setTools(data) {
     if (data.length > 3) {
         data = [data[0], data[1], data[2]]
     } else {
-        data=data
+        data = data
     }
-    for(const value in data){
+    for (const value in data) {
         const Tools = document.getElementById("page1-right-bottom-tools-list")
         const itemtool = document.createElement('div')
         itemtool.className = "oneitem"
-        itemtool.innerHTML=`<a href="${data[value].href}"></a>
+        itemtool.innerHTML = `<a href="${data[value].href}"></a>
                                 <div>
                                     <p class="oneitem-title"
                                         style="transform: translateY(-10px);font-size: 26px;margin: 20px 15px 0px 15px;">${data[value].name}</p>
@@ -219,4 +221,50 @@ function setTools(data) {
                                 </div>`
         Tools.appendChild(itemtool)
     }
+}
+function setPage2Repo(data) {
+    data = data.repos
+    const allrepos = document.getElementById("page2-left-list");
+    for (const value in data) {
+        const itemrepo = document.createElement('div')
+        itemrepo.className = "oneitem"
+        itemrepo.innerHTML = `<a href="${data[value].href}"></a>
+                                <div>
+                                    <p class="oneitem-title"
+                                        style="transform: translateY(-10px);font-size: 26px;margin: 20px 15px 0px 15px;">${data[value].name}</p>
+                                    <p class="oneitem-concent"
+                                        style="transform: translateY(-5px);font-family: 'Noto Sans SC', sans-serif;font-size: 18px;margin: 0px 15px 0px 15px; ">${data[value].content}</p>
+                                </div>`
+        allrepos.appendChild(itemrepo)
+    }
+}
+function setPage2Tool(data) {
+    data = data.tools
+    const alltools = document.getElementById("page2-right-list");
+    for (const value in data) {
+        const itemtool = document.createElement('div')
+        itemtool.className = "oneitem"
+        itemtool.innerHTML = `<a href="${data[value].href}"></a>
+                                <div>
+                                    <p class="oneitem-title"
+                                        style="transform: translateY(-10px);font-size: 26px;margin: 20px 15px 0px 15px;">${data[value].name}</p>
+                                    <p class="oneitem-concent"
+                                        style="transform: translateY(-5px);font-family: 'Noto Sans SC', sans-serif;font-size: 18px;margin: 0px 15px 0px 15px; ">${data[value].content}</p>
+                                </div>`
+        alltools.appendChild(itemtool)
+    }
+}
+
+function page1Click(){
+    pages = document.getElementsByClassName("pages")
+    for (const value of pages){
+        value.classList.add("no-active")
+    }
+    document.getElementById("page1").classList.remove("no-active")
+}
+function page2Click(){
+    pages = document.getElementsByClassName("pages")
+    for (const value of pages){
+        value.classList.add("no-active")
+    }document.getElementById("page2").classList.remove("no-active")
 }

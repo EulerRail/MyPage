@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="" type="image/x-icon" id="t-favicon">
     <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://alicdn.alibabausercontent.com/@alifd/next/1.25.35/next.css" rel="stylesheet">
@@ -18,21 +19,20 @@
     <div id="background">
         <img id="bg-img">
     </div>
-    <div id="nav">
+    <div id="nav" style="user-select: none">
         <div id="nav-logo">
             <div id="nav-favicon"></div>
             <div id="nav-name"></div>
         </div>
         <div id="nav-list">
             <div id="nav-list-page">
-                <a class="nav-character nav-page1" id="nav-page1">主页</a>
-                <a class="nav-character nav-page2" id="nav-page2">仓库</a>
-                <a class="nav-character nav-page3" id="nav-page3">文章</a>
+                <a class="nav-character nav-page1" id="nav-page1" onclick="page1Click()">主页</a>
+                <a class="nav-character nav-page2" id="nav-page2" onclick="page2Click()">仓库</a>
             </div>
         </div>
     </div>
     <div id="main">
-        <div id="page1">
+        <div id="page1" class="pages" style="user-select: none">
             <div id="page1-left">
                 <div id="page1-left-top">
                 </div>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div id="page1-right">
+            <div id="page1-right" style="user-select: none">
                 <div id="page1-right-top">
                     <div id="page1-right-top-time">
                         <div id="page1-right-top-daytime"></div>
@@ -120,7 +120,7 @@
                     <div id="page1-right-bottom-tools">
                         <p style="transform: translateX(20px);width: 200px;font-size: 23px;">Tools</p>
                         <div id="page1-right-bottom-tools-list">
-                            
+
                         </div>
                     </div>
                     <div></div>
@@ -137,7 +137,16 @@
                 </div>
             </div>
         </div>
-        <div id="page2"></div>
+        <div id="page2" class="no-active pages">
+            <div id="page2-left">
+                <h1 style="font-size: 30px;">Github</h1>
+                <div id="page2-left-list"></div>
+            </div>
+            <div id="page2-right">
+                <h1 style="font-size: 30px;">Tools</h1>
+                <div id="page2-right-list"></div>
+            </div>
+        </div>
         <div id="page3"></div>
     </div>
 </body>

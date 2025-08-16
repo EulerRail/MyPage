@@ -354,7 +354,7 @@
     overflow-x: auto;
     padding: 9px;
 }
-.oneitem{
+#page1 .oneitem{
     flex: 0 0 auto;
     width: 220px;
     height: 120px;
