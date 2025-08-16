@@ -340,9 +340,9 @@
 .line-item{
     position: relative;
     padding-left: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     width: 250px;
-    height: 180px;
+    height: auto;
 }
 #page1-right-bottom-repo{
     width: 94%;
