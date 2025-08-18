@@ -13,29 +13,12 @@ fetch('data.json') /** * 从data.json文件获取数据并处理 * 使用fetch A
     .catch(error => { //  捕获并处理可能的错误
         console.error('Error fetching JSON:', error);
     });
-
-document.addEventListener('DOMContentLoaded', () => { //  确保DOM内容加载完成后再执行
-    var style = document.createElement('style');
-
-    // 将字体文件链接放在<style>标签中
-    style.textContent = `
-    @font-face {
-    font-family: 'hk';
-    src: url('assets/font/web.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-    body {
-    text-decoration: none;
-    font-family: 'hk', 'Alimama PuHuiTi', 'Noto Sans SC', sans-serif !important;
-}
-`;
-
-    // 将<style>标签添加到页面的头部或尾部
-    document.head.appendChild(style);
-    console.log('Font loaded and styles applied successfully.');
-})
+window.addEventListener('load', () => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'assets/css/font.css';   // 把 @font-face 单独放这里
+    document.head.appendChild(link);
+});
 
 /**
  * 设置CSS变量值

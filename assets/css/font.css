@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'hk';
+    src: url('../font/web.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+    body {
+    text-decoration: none;
+    font-family: 'hk', 'Alimama PuHuiTi', 'Noto Sans SC', sans-serif !important;
+}
