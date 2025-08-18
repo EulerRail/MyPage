@@ -1,0 +1,99 @@
+{
+    "repos": [
+        {
+            "name": "PythonDemo",
+            "content": "Python小demo合集",
+            "href": "https://github.com/EulerRail/PythonDemo"
+        },
+        {
+            "name": "翻译器v1.0",
+            "content": "小翻译器（神经板）",
+            "href": "https://github.com/EulerRail/Encrypt"
+        }
+    ],
+    "tools": [
+        {
+            "name": "翻译器v1.0",
+            "content": "小翻译器（神经板）",
+            "href": "https://eulerrail.github.io/Encrypt"
+        }
+    ],
+    "notes": [],
+    "lines": [
+        {
+            "time": "2025-8-16",
+            "content": "第一版功能基本完毕"
+        },
+        {
+            "time": "2025-8-10",
+            "content": "开始建站"
+        }
+    ],
+    "data": {
+        "name": "EulerRail",
+        "title": "MyPage",
+        "description": "mm一中开你m学nmsl<br>上林州一中这辈子真有了",
+        "bg": {
+            "type": "image",
+            "src": "img/bg/1.jpg"
+        },
+        "icon": {
+            "type": "image",
+            "src": "img/icon/Profile.jpg"
+        },
+        "tag_list": [
+            {
+                "name": "流萤厨",
+                "hover-color": "#f2d8e4"
+            },
+            {
+                "name": "html+css+Js",
+                "hover-color": "#c34628"
+            },
+            {
+                "name": "Python",
+                "hover-color": "#ffc107"
+            },
+            {
+                "name": "GitHub",
+                "hover-color": "#606060"
+            },
+            {
+                "name": "MC",
+                "hover-color": "#8EB971"
+            },
+            {
+                "name": "VScode",
+                "hover-color": "#22a7f2"
+            },
+            {
+                "name": "玻璃感",
+                "hover-color": "#ffffff77"
+            }
+        ],
+        "color_list": {
+            "color-nav": "#f4f4f419",
+            "color-nav-name": "#f4f4f4",
+            "color-main-name": "#ffffff",
+            "color-main-name2": "#F08080",
+            "color-main-description": "#ffffff",
+            "color-main-clock": "#5ccbff",
+            "color-main-line-radius": "#010101",
+            "color-main-line": "#010101"
+        },
+        "link_list": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/EulerRail",
+                "color": "#010101",
+                "icon": "img/icon/GitHub.png"
+            },
+            {
+                "name": "Bilibili",
+                "url": "https://space.bilibili.com/3546941321382878",
+                "color": "#ff6a00",
+                "icon": "img/icon/bili.png"
+            }
+        ]
+    }
+}

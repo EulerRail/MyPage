@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="" type="image/x-icon" id="t-favicon">
+    <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://alicdn.alibabausercontent.com/@alifd/next/1.25.35/next.css" rel="stylesheet">
+    <script src="assets/js/script1.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <title id="title"></title>
+</head>
+
+<body>
+    <div id="background">
+        <img id="bg-img">
+    </div>
+    <div id="nav" style="user-select: none">
+        <div id="nav-logo">
+            <div id="nav-favicon"></div>
+            <div id="nav-name"></div>
+        </div>
+        <div id="nav-list">
+            <div id="nav-list-page">
+                <a class="nav-character nav-page1" id="nav-page1" onclick="page1Click()">主页</a>
+                <a class="nav-character nav-page2" id="nav-page2" onclick="page2Click()">仓库</a>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="page1" class="pages" style="user-select: none">
+            <div id="page1-left">
+                <div id="page1-left-top">
+                </div>
+                <div id="page1-left-middle">
+                    <div id="page1-left-middle-description">
+                    </div>
+                </div>
+                <div id="page1-left-bottom">
+                    <div id="page1-left-bottom-tags">
+                    </div>
+                </div>
+                <div id="page1-left-bottom-links">
+                    <div id="page1-left-bottom-link1" class="link">
+                        <a href="https://github.com/EulerRail"
+                            style="text-decoration: none;color: #080808;font-size:30px;">GitHub</a>
+                        <img src="assets/img/icon/GitHub.svg" alt="GitHub Icon" style="background-color: #080808;">
+                    </div>
+                    <div id="page1-left-bottom-link2" class="link">
+                        <a href="https://space.bilibili.com/3546941321382878"
+                            style="text-decoration: none;color: #fb7299;font-size:30px;">BiliBili</a>
+                        <img src="assets/img/icon/bili.svg" alt="BiliBili Icon" style="background-color: #fb7299;">
+                    </div>
+                </div>
+            </div>
+            <div id="page1-right" style="user-select: none">
+                <div id="page1-right-top">
+                    <div id="page1-right-top-time">
+                        <div id="page1-right-top-daytime"></div>
+                        <div id="page1-right-top-clock">
+                        </div>
+                    </div>
+                    <div id="page1-right-top-date">
+                        <div id="page1-right-top-date-list">
+                            <div class="date" id="date0"> </div>
+                            <div class="date" id="date1"> </div>
+                            <div class="date" id="date2"> </div>
+                            <div class="date" id="date3"> </div>
+                            <div class="date" id="date4"> </div>
+                            <div class="date" id="date5"> </div>
+                            <div class="date" id="date6"> </div>
+                            <div class="date" id="date7"> </div>
+                            <div class="date" id="date8"> </div>
+                            <div class="date" id="date9"> </div>
+                            <div class="date" id="date10"> </div>
+                            <div class="date" id="date11"> </div>
+                            <div class="date" id="date12"> </div>
+                            <div class="date" id="date13"> </div>
+                            <div class="date" id="date14"> </div>
+                            <div class="date" id="date15"> </div>
+                            <div class="date" id="date16"> </div>
+                            <div class="date" id="date17"> </div>
+                            <div class="date" id="date18"> </div>
+                            <div class="date" id="date19"> </div>
+                            <div class="date" id="date20"> </div>
+                            <div class="date" id="date21"> </div>
+                            <div class="date" id="date22"> </div>
+                            <div class="date" id="date23"> </div>
+                            <div class="date" id="date24"> </div>
+                            <div class="date" id="date25"> </div>
+                            <div class="date" id="date26"> </div>
+                            <div class="date" id="date27"> </div>
+                            <div class="date" id="date28"> </div>
+                            <div class="date" id="date29"> </div>
+                            <div class="date" id="date30"> </div>
+                            <div class="date" id="date31"> </div>
+                            <div class="date" id="date32"> </div>
+                            <div class="date" id="date33"> </div>
+                            <div class="date" id="date34"> </div>
+                            <div class="date" id="date35"> </div>
+                            <div class="date" id="date36"> </div>
+                            <div class="date" id="date37"> </div>
+                            <div class="date" id="date38"> </div>
+                            <div class="date" id="date39"> </div>
+                            <div class="date" id="date40"> </div>
+                            <div class="date" id="date41"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="page1-right-bottom">
+                    <div id="page1-right-bottom-repo">
+                        <p style="transform: translateX(20px);width: 200px;font-size: 23px;">GitHub</p>
+                        <div id="page1-right-bottom-repos-list">
+                        </div>
+                    </div>
+                    <div id="page1-right-bottom-tools">
+                        <p style="transform: translateX(20px);width: 200px;font-size: 23px;">Tools</p>
+                        <div id="page1-right-bottom-tools-list">
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div id="page1-line">
+                <div id="line"></div>
+                <div id="linelist">
+                    <div class="line-item">
+                        <div class="line-radius"></div>
+                        <div class="line-time"></div>
+                        <div class="line-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page2" class="no-active pages">
+            <div id="page2-left">
+                <h1 style="font-size: 30px;">Github</h1>
+                <div id="page2-left-list"></div>
+            </div>
+            <div id="page2-right">
+                <h1 style="font-size: 30px;">Tools</h1>
+                <div id="page2-right-list"></div>
+            </div>
+        </div>
+        <div id="page3"></div>
+    </div>
+</body>
+
+</html>

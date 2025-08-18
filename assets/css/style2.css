@@ -1,0 +1,54 @@
+#page2 {
+    overflow-x: auto;
+    position: fixed;
+    top: 120px;
+    overflow-y: hidden;
+    width: 80%;
+    left: 10%;
+    height: calc(100% - 140px);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.108);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 1px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 1px rgba(40, 40, 40, 0.35) solid;
+    border-right: 1px rgba(40, 40, 40, 0.35) solid;
+}
+#page2-left{
+    overflow-y: auto;
+    flex:1 1 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#page2-right{
+    overflow-y: auto;
+    flex:1 1 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#page2-right-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+#page2-left-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+#page2 .oneitem{
+    flex: 0 0 auto;
+    width: 240px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(164, 221, 240, 0.069);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 3px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 3px rgba(40, 40, 40, 0.35) solid;
+    border-right: 3px rgba(40, 40, 40, 0.35) solid;
+}
